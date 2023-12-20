@@ -1,0 +1,13 @@
+.head1-sec{
+    height: 80px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+.content-section a{
+    text-decoration: none;
+    margin-right: 10px;
+}

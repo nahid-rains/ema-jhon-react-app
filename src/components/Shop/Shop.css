@@ -1,0 +1,18 @@
+.mother-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.product-container{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 35px;
+    margin: 125px 70px;
+   
+    
+}
+.cart-container{
+    background-color: crimson;
+    color: #fff;
+    text-align: center;
+}
