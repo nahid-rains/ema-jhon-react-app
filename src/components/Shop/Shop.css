@@ -12,8 +12,14 @@
     
 }
 .cart-container{
-    background-color: rgb(246, 238, 240);
+    background-color: rgb(4, 16, 40);
     color: #db2ca1;
     text-align: center;
     
+}
+@media only screen and (max-width: 600px) {
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
 }
