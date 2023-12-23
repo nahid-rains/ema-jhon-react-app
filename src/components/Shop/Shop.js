@@ -3,19 +3,31 @@ import './Shop.css'
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import Sample from '../Sample/Sample';
+import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 const Shop = () => {
     const [products,setProducts] = useState([]);
     const [cart,setCart] = useState([]);
     useEffect(()=>{
-        // fetch(` https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json`)
         fetch(`products.json`)
         .then(res=>res.json())
         .then(data=>setProducts(data))
-    },[])
+    },[]);
+    useEffect(()=>{
+        const storedCart = getShoppingCart();
+        let saveCart = [];
+        for(const id in storedCart){
+            const addededProduct = products.find(product=>product.id === id);
+            if(addededProduct){
+               saveCart.push(addededProduct)
+            }
+            setCart(saveCart)
+        }
+    },[products])
     const handelToAdd = (product) =>{
-        // console.log(product)
-       const newCart = [...cart,product];
-       setCart(newCart)
+        const newCart = [...cart,product];
+        setCart(newCart)
+        addToDb(product.id)
+        // getShoppingCart(product.id)
     }
     return (
         <div className='mother-container'>
