@@ -1,13 +1,17 @@
 .mother-container{
     display: grid;
     grid-template-columns: 4fr 1fr;
+    background-color: rgb(246, 246, 241);
 }
 .product-container{
     
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 35px;
-    margin: 125px 70px;
+    margin: 125px 70px;  
+   
+   
+   
    
     
 }

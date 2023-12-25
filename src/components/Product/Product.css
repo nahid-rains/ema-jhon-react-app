@@ -2,17 +2,17 @@
     height: 508px;
     width: 300px;
    position: relative;
-    background-color:rgb(232, 236, 240) ;
+    background-color:rgb(241, 235, 235) ;
     border: 1px solid rgb(241, 216, 216);
     border-radius: 8px;
     box-shadow: 10px 7px 7px 2px rgb(116, 115, 115) ;
    
   
 }
-.product-sec:hover{
+/* .product-sec:hover{
     transform: scale(.95);
     transition: 800ms;
-}
+} */
 .product-sec img{
     height: 286px;
     width: 286px;
